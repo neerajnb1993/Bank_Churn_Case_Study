@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-color:green;">
+<head>
+  <meta charset="UTF-8">
+  <title>Model Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+      }
+    </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center">Churn Analytics</h1>
+
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" style="text-align:center" name="CreditScore" placeholder="CreditScore" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="Gender" placeholder="Gender" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="Tenure" placeholder="Tenure" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="Balance" placeholder="Balance" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="NumOfProducts" placeholder="NumOfProducts" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="HasCrCard" placeholder="HasCrCard" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="IsActiveMember" placeholder="IsActiveMember" required="required" />
+        <br>
+        <input type="text" style="text-align:center" name="EstimatedSalary" placeholder="EstimatedSalary" required="required" />
+        <br>
+		<input type="text" style="text-align:center" name="geo_Germany" placeholder="geo_Germany" required="required" />
+        <br>
+	<input type="text" style="text-align:center" name="geo_Spain" placeholder="geo_Spain" required="required" />
+        <br>
+	<input type="text" style="text-align:center" name="Age" placeholder="Age" required="required" />
+        <br>
+		
+	
+
+        <button align="center" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+     {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
